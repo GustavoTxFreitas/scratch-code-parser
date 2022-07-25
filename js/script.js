@@ -1,5 +1,5 @@
 const anchorElement = document.getElementById("download");
-const inputElement = document.getElementById("myfile");
+const inputElement = document.getElementById("upload");
 
 const fileReader = new FileReader();
 
@@ -15,7 +15,4 @@ function handleFiles() {
     anchorElement.href = objectURL
 
     fileReader.readAsArrayBuffer(file);
-    // fileReader.readAsBinaryString(file);
-    // fileReader.readAsDataURL(file);
-    // fileReader.readAsText(file);
 }

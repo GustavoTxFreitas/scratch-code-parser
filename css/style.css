@@ -19,10 +19,17 @@ html,
 body {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     color: var(--color-lightest);
     background-color: var(--color-darkest);
     font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    padding: 3em 2em;
+    border-radius: 0.6em;
+    margin: min(2em, 5vw);
+    background-color: var(--color-darker);
 }
 
 h1,
@@ -45,10 +52,29 @@ h3 {
 
 
 form {
+    margin: 2em 0;
+
     display: flex;
     flex-direction: column;
+}
 
-    margin-top: 2em;
-    padding: 2em 1em;
-    background-color: var(--color-darker);
+input[type="file"]{
+    margin-top: 1em;
+}
+
+input[type="file"]::-webkit-file-upload-button{
+    border: none;
+    padding: 1em 2em;
+    margin-right: 1.5em;
+    border-radius: 0.4em;
+
+    font-weight: 800;
+    transition: filter 0.2s;
+    color: var(--color-lightest);
+    background-color: var(--color-darkest);
+}
+
+input[type="file"]::-webkit-file-upload-button:hover{
+    cursor: pointer;
+    filter: opacity(0.5);
 }
